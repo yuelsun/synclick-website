@@ -1,0 +1,592 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 头部样式 */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+    font-weight: 300;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+/* 导航栏样式 */
+nav {
+    background-color: #34495e;
+    position: static;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    background-color: #2c3e50;
+}
+
+/* 主要内容区域 */
+main {
+    padding: 1rem 0;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 400;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+section h3 {
+    color: #34495e;
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+section p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* 高亮框样式 */
+.highlight-box {
+    background-color: #ecf0f1;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    border-left: 4px solid #3498db;
+}
+
+.highlight-box h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.highlight-box ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.highlight-box li {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+/* 视频容器样式 */
+.video-container {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.video-container video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #000;
+}
+
+.video-placeholder {
+    background-color: #ecf0f1;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 6px;
+    border: 2px dashed #bdc3c7;
+}
+
+.video-placeholder p {
+    margin: 0.5rem 0;
+    color: #7f8c8d;
+}
+
+.video-description {
+    color: #666;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* 响应式视频样式 */
+@media (max-width: 768px) {
+    .video-container video {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container video {
+        max-height: 300px;
+    }
+}
+
+/* 用户手册样式 */
+.manual-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.manual-section ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.manual-section li {
+    margin-bottom: 0.5rem;
+}
+
+.download-links {
+    background-color: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+/* 下载区域样式 */
+.download-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    align-items: stretch;
+    /* 确保卡片高度一致 */
+}
+
+.download-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.download-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.download-card:hover::before {
+    transform: scaleX(1);
+}
+
+.download-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-header h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.card-header p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.github-link {
+    display: inline-block;
+    background-color: #24292e;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.github-link:hover {
+    background-color: #0366d6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.github-icon {
+    margin-right: 0.5rem;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+    /* 确保按钮容器内元素高度一致 */
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 200px;
+    justify-content: center;
+    min-height: 48px;
+    /* 设置最小高度确保一致性 */
+    box-sizing: border-box;
+}
+
+.github-btn {
+    background-color: #24292e;
+    color: white;
+}
+
+.github-btn:hover {
+    background-color: #0366d6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gitee-btn {
+    background-color: #c71d23;
+    color: white;
+}
+
+.gitee-btn:hover {
+    background-color: #a0171c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-icon {
+    font-size: 1.2rem;
+}
+
+.btn-text {
+    font-weight: 500;
+    white-space: nowrap;
+    /* 防止文本换行 */
+}
+
+/* 让source-btn完全使用download-btn的样式 */
+.source-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #24292e;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 200px;
+    justify-content: center;
+    min-height: 48px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.source-button-container {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.source-btn:hover {
+    background-color: #0366d6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-note {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* 旧的下载链接样式保留，以防其他地方使用 */
+.download-link {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #2980b9;
+}
+
+/* 知识产权样式 */
+.ip-info-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.ip-info-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.ip-info-section p {
+    margin: 0;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.ip-info-section strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* 联系我们样式 */
+#contact a[href^="mailto:"] {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+#contact a[href^="mailto:"]:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+#contact a[href^="mailto:"]:first-child {
+    margin-left: 0.5rem;
+}
+
+#contact a[href^="mailto:"]:not(:last-child)::after {
+    content: "|";
+    color: #7f8c8d;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.contact-item ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.contact-item li {
+    margin-bottom: 0.5rem;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    opacity: 0.8;
+}
+
+.ip-info {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding: 0.5rem 0;
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        text-align: center;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+    }
+
+
+    section {
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .manual-content,
+    .download-container,
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.5rem 0;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    nav ul {
+        padding: 0.3rem 0;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    .video-placeholder {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    nav a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+
+    nav ul {
+        padding: 0.2rem 0;
+    }
+}
