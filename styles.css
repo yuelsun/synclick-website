@@ -211,37 +211,12 @@ section p {
 }
 
 .download-card {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    background: #ffffff;
     border: 1px solid #e9ecef;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow: hidden;
-}
-
-.download-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #3498db, #2ecc71);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.download-card:hover::before {
-    transform: scaleX(1);
-}
-
-.download-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
@@ -269,14 +244,13 @@ section p {
     text-decoration: none;
     border-radius: 6px;
     margin-top: 1rem;
-    transition: all 0.3s ease;
+    transition: background-color 0.2s ease;
     font-weight: 500;
+    border: 1px solid transparent;
 }
 
 .github-link:hover {
     background-color: #0366d6;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .github-icon {
@@ -299,16 +273,15 @@ section p {
     gap: 0.5rem;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 6px;
     font-size: 1rem;
     font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s ease;
     width: 200px;
     justify-content: center;
     min-height: 48px;
-    /* 设置最小高度确保一致性 */
     box-sizing: border-box;
+    border: 1px solid transparent;
 }
 
 .github-btn {
@@ -318,8 +291,6 @@ section p {
 
 .github-btn:hover {
     background-color: #0366d6;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .gitee-btn {
@@ -329,8 +300,6 @@ section p {
 
 .gitee-btn:hover {
     background-color: #a0171c;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-icon {
@@ -350,18 +319,18 @@ section p {
     gap: 0.5rem;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 6px;
     font-size: 1rem;
     font-weight: 500;
     background-color: #24292e;
     color: white;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s ease;
     width: 200px;
     justify-content: center;
     min-height: 48px;
     box-sizing: border-box;
     height: auto;
+    border: 1px solid transparent;
 }
 
 .source-button-container {
@@ -372,8 +341,6 @@ section p {
 
 .source-btn:hover {
     background-color: #0366d6;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .download-note {
